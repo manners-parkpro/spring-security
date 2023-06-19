@@ -7,11 +7,6 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 public abstract class AdminAbstractSecurityConfiguration {
 
     @Bean
-    public PasswordEncoder passwordEncoder() {
-        return PasswordEncoderFactories.createDelegatingPasswordEncoder();
-    }
-
-    @Bean
     public AdminAuthenticationSuccessHandlerImpl successHandler() {
         return new AdminAuthenticationSuccessHandlerImpl();
     }
